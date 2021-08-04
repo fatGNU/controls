@@ -34,7 +34,7 @@ See list of properties illustrated below:
                 
     backwards - an attribute that tells the navigation component to show a backward navigation 
                 componentand mount it to the left of the viewport. Defaults to showing it
-                at the center (along the viewport's height)-> top: 50%, left: 90% passed 
+                at the center (along the viewport's height)-> top: 50%, left: 0% passed 
                 in the position property as an array (by default) of ['50%','0%'].
                 
     navigableComponents - this is an array of components (complete with their (desired) properties)
