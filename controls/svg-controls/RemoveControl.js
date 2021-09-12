@@ -9,6 +9,7 @@ export default class RemoveControl extends BaseControl {
     constructor(props) {
         super(props);
         this.callback = props.callback;
+        this.style = props.style === undefined ? {width: 60, height: 60} : props.style;//square width and height of 60 px
         //original colour of the control
         // #141124
     }
@@ -16,7 +17,7 @@ export default class RemoveControl extends BaseControl {
     render = () => {
         return (
             //previous style for width and height: width="24px" height="24px"
-            <svg onClick={this.callback} className={`${this.className} remove-control`} viewBox="0 0 24 24" id="_24x24_On_Light_Remove"
+            <svg style = {{...this.style}} onClick={this.callback} className={`${this.className}`} viewBox="0 0 24 24" id="_24x24_On_Light_Remove"
                  data-name="24x24/On Light/Remove" xmlns="http://www.w3.org/2000/svg">
                 <rect id="view-box" width="24" height="24" fill="none"/>
                 <path id="Shape"

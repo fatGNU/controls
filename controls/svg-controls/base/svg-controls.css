@@ -28,7 +28,7 @@
 
 .svg-control{
     margin-top: 8px;
-    width: max-content;
+    width: fit-content;
     height: max-content;
     cursor: pointer;
     background: #FFFFFF;

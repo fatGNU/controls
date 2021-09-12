@@ -9,11 +9,12 @@ export default class CloseControl extends BaseControl {
         super(props);
         this.callback = props.callback;
         this.closeControl = String('close-control');
+        this.style = props.style === undefined ? {width: 40, height: 40} : props.style;//square width and height of 60 px
     }
 
     render = () => {
         return (
-            <svg onClick={this.callback} className={`${this.className} ${this.closeControl}`} version="1.1"
+            <svg style={{...this.style}} onClick={this.callback} className={`${this.className} ${this.closeControl}`} version="1.1"
                  x="0px" y="0px" viewBox="0 0 87.971 47.971">
                 <g>
                     <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
