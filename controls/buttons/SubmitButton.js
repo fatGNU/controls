@@ -11,21 +11,31 @@ import "./base/button-control.css";
  *
  */
 export default class SubmitButton extends Button {
-    constructor(props) {
-        super(props);
-        this.callback = props.callback;
-        this.commandText = props.commandText;
-    }
+  constructor(props) {
+    super(props);
+    this.callback = props.callback;
+    this.commandText = props.commandText;
+  }
 
-    render = () => {
-        return (
-
-            <button className={"btn btn-primary"} onClick={this.callback}>
-                {this.commandText === undefined? `Submit` : this.commandText}
-            </button>
-
-
-        );
-
-    }
+  render = () => {
+    return (
+      <button
+        className={"btn"}
+        style={{
+          //   height: 40,
+          //   fontSize: 14,
+          //   textTransform: "capitalize",
+          //   border: "1px solid #460046",
+          color: "#fff",
+          background: "#460046",
+          border: "none",
+          cursor: "pointer",
+          ...this.style,
+        }}
+        onClick={this.callback}
+      >
+        {this.commandText === undefined ? `Submit` : this.commandText}
+      </button>
+    );
+  };
 }
