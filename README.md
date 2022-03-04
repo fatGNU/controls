@@ -37,16 +37,12 @@ See list of properties illustrated below:
                 at the center (along the viewport's height)-> top: 50%, left: 0% passed 
                 in the position property as an array (by default) of ['50%','0%'].
                 
-    navigableComponents - this is an array of components (complete with their (desired) properties)
+    navigableRoutes - this is an array of routes (complete with their (desired) properties)
                 that the navigation switches in and out of the desired viewport area.
     
     callback - the method to call when the navigation is clicked. Note that the callback property
                 assumes that it's concerned with switching of navigableComponents. The engineer
                 should provide mechanisms of conducting additional functionality if desired.
-                
-    navigateTo - this is an integer telling the navigation component which component (through
-                its index) to navigate to. Defaults to navigableComponents halfway mark (even
-                when its absent - which is 0).
                 
     forwardColour - a string of HEX digits or colour name that tells the colour that is to be applied
                         to the forwards control.
